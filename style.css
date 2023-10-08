@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+body {
+	width: 100%;
+	max-height: 100vh;
+	padding: 10px;
+	font-family: "Montserrat", sans-serif;
+	background-color: #12486b;
+	color: white;
+}
+
+#app-container {
+	margin: 20px auto;
+	text-align: center;
+}
+
+.search-container {
+	margin-top: 30px;
+}
+
+#search-input,
+#search-btn,
+#showMore-btn {
+	padding: 15px;
+	border: none;
+	outline: none;
+	font-size: large;
+}
+
+#search-input {
+	width: 100%;
+	max-width: 500px;
+	position: relative;
+	left: 5px;
+	border-radius: 10px 0 0 10px;
+}
+
+#search-btn {
+	cursor: pointer;
+	background-color: orange;
+	border-radius: 0 10px 10px 0;
+}
+
+#search-btn i {
+	padding: 0 8px;
+	transform: scale(1.5);
+	transition: 0.2s;
+}
+
+#search-btn:hover i {
+	transform: scale(1.8);
+}
+
+.result-container {
+	margin: 50px 20px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 40px;
+	position: relative;
+}
+
+.result-container img {
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
+	border-radius: 8px;
+	transition: 0.2s;
+	animation: fade 0.3s linear;
+}
+
+@keyframes fade {
+	0% {
+		opacity: 0.1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.result-container img:hover {
+	transform: scale(1.05);
+	box-shadow: 0px 5px 15px black;
+}
+
+#showMore-btn {
+	padding: 12px 30px;
+	border-radius: 8px;
+	background-color: orange;
+	cursor: pointer;
+	transition: 0.2s;
+	margin: 0 auto 0 auto;
+	display: none;
+}
+
+#showMore-btn:active {
+	background-color: darkorange;
+}
+
+.noData {
+	position: absolute;
+	left: 50%;
+	top: 300px;
+	right: 50%;
+	transform: translate(-50%, -50%);
+	width: 300px;
+	font-size: 30px;
+	color: tomato;
+	display: none;
+}
+
+#footer {
+	opacity: 0.6;
+	margin: 30px;
+	display: none;
+	padding-bottom: 30px;
+}
+
+.toTop {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: orange;
+	display: block;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	display: grid;
+	place-items: center;
+	font-size: larger;
+	font-weight: bold;
+	transition: opacity 0.3s;
+	opacity: 0.2;
+	cursor: pointer;
+}
+
+.toTop:hover {
+	opacity: 1;
+}
+
+@media only screen and (max-width: 700px) {
+	h1 {
+		font-size: 26px;
+	}
+
+	.search-container {
+		margin-top: 20px;
+	}
+	#search-input,
+	#search-btn,
+	#showMore-btn {
+		padding: 10px 15px;
+		font-size: medium;
+	}
+	#search-input {
+		width: 70%;
+	}
+
+	.result-container {
+		margin: 50px 10px;
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+
+	.result-container img:hover {
+		transform: scale(1);
+	}
+	footer {
+		display: none;
+	}
+}

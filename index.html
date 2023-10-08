@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Image Search | 78/100 Projects By CodeBustler</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="icon"
+			type="image/png"
+			href="https://avatars.githubusercontent.com/u/110022096?v=4"
+		/>
+		<link rel="stylesheet" type="text/css" href="./style.css" />
+		<script
+			src="https://kit.fontawesome.com/81d73e8e4d.js"
+			crossorigin="anonymous"
+		></script>
+		<script src="./script.js" defer></script>
+	</head>
+	<body>
+		<div id="app-container">
+			<h1>Image search engine</h1>
+			<p style="margin: 10px 0 30px 0; opacity: 0.7">
+				By using HTML, CSS & JavaScript
+			</p>
+			<form>
+				<div class="search-container">
+					<input
+						type="text"
+						placeholder="Search anything..."
+						id="search-input"
+					/>
+					<button id="search-btn">
+						<i class="fa-brands fa-searchengin"></i>
+					</button>
+				</div>
+
+				<div class="result-container"></div>
+				<button id="showMore-btn">Show More</button>
+			</form>
+			<p class="noData">No data found</p>
+			<footer>
+				<p id="footer">By CodeBustler</p>
+			</footer>
+		</div>
+		<a class="toTop" onclick="window.scrollTo(0, 0)"
+			><i class="fa-solid fa-arrow-up"></i
+		></a>
+		<!-- href="#app-container" -->
+	</body>
+</html>
