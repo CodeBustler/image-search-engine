@@ -1,4 +1,4 @@
-# image-search-engine
+# Image Search Engine
 image-search-engine | using HTML, CSS &amp; JavaScript
 
 ## Project Live
